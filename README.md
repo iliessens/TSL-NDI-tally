@@ -32,3 +32,8 @@ Note that the NDI source names must be exactly right. These are used to discover
 ## FAQ
 * *Why do not use the TSL labels for mapping to the NDI source names?*  
 As the TSL protocol is limited to 16 characters, this might often be not enough to fully specify the NDI name. Additionally, specifying the mapping separate provides more flexibility.
+
+## License
+The code is distributed under the MIT license.  
+
+The NDI headers are distributed under the same license by Newtek. Check the license header in the include files for more information.  
