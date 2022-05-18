@@ -51,5 +51,9 @@ SourceMapper::~SourceMapper() {
 
 NDITally* SourceMapper::id_to_source(int id)
 {
+	if (sources.count(id) == 0) {
+		return NULL;
+	}
+
 	return sources[id];
 }
