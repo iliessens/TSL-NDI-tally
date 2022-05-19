@@ -18,7 +18,11 @@ int main(int argc, char* argv[])
 		while (1) {
 			TallyState state = tsl.listen();
 			NDITally* tally = mapper.id_to_source(state.id);
-			tally->setState(state.program, state.preview);
+			if (tally != NULL) {
+				tally->setState(state.program, state.preview);
+			} else {
+				printf("TSL address %i not mapped to NDI source.\n", state.id);
+			}
 		}
 	}
 	catch (std::exception& e) {
